@@ -10,7 +10,18 @@ namespace BinarySearchTree
     {
         static void Main(string[] args)
         {
+            TreeOperations operations = new TreeOperations();
+            TreeNode node = null;
 
+            int[] nodes = { 1, 3, 2, 5 };
+
+            foreach (var item in nodes)
+            {
+                node = operations.Insert(node, item);
+            }
+
+            operations.PreOrder(node);
+            Console.ReadLine();
 
         }
     }
